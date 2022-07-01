@@ -14,7 +14,7 @@
     @include responsive(){
         flex-direction: column;
         height: auto;
-        overflow: hidden;
+        overflow: none;
     }
 }
 
@@ -39,7 +39,7 @@
 }
 
 .spiderman{
-    width: 150%;
+    width: 130%;
     transform: translate3d(-170px, 0, 0);
 
     @include responsive(){
