@@ -5,10 +5,17 @@
     padding: 36px 16px;
 
     overflow: hidden;
+    height: 85vh;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include responsive(){
+        flex-direction: column;
+        height: auto;
+        overflow: none;
+    }
 }
 
 .container-item-1{
@@ -19,13 +26,26 @@
     align-items: flex-start;
 }
 
-.container-item-2{
+.flex{
+    display: flex;
+}
 
+.w-auto{
+    width: auto;
+}
+
+.align-item-center{
+    align-items: center;
 }
 
 .spiderman{
     width: 150%;
     transform: translate3d(-170px, 0, 0);
+
+    @include responsive(){
+        width: 100%;
+        transform: translate3d(0,0,0);
+    }
 }
 
 .btn{
@@ -126,4 +146,20 @@
             width: 102%;
         }
     }
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
