@@ -33,15 +33,60 @@
 .btn{
     display: inline-block;
 
-    border: 1px solid red;
-
     padding: 12px 32px;
     border-radius: 3px;
 
     transform: skewX(-10deg);
+    transition: .7s ease;
 
     text-transform: uppercase;
     background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
 
-    
+    position: relative;
+
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+
+        width: 30%;
+        height: 70%;
+        opacity: 0;
+        transition: .7s ease;
+
+        border-radius: 3px;
+
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+
+        width: 30%;
+        height: 70%;
+        opacity: 0;
+        transition: .7s ease;
+
+        border-radius: 3px;
+
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+    }
+
+    &:hover{
+        transform: skewX(-10deg) scale(1.05);
+        &::after{
+            opacity: 1;
+        }
+        &::before{
+            opacity: 1;
+        }
+    }
 }
