@@ -1,0 +1,47 @@
+.container{
+    border: 1px solid red;
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+    padding: 36px 16px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-item-1{
+    max-width: 576px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-item-2{
+
+}
+
+.spiderman{
+    width: 150%;
+    transform: translate3d(-170px, 0, 0);
+}
+
+.btn{
+    display: inline-block;
+
+    border: 1px solid red;
+
+    padding: 12px 32px;
+    border-radius: 3px;
+
+    transform: skewX(-10deg);
+
+    text-transform: uppercase;
+    background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
+
+    
+}
